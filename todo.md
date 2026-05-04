@@ -25,3 +25,9 @@
 - [x] Localizar y retirar del home el bloque identificado como `Cartografía aplicada a decisiones críticas`.
 - [x] Revisar si la eliminación requiere ajustes de espaciado para que la transición entre secciones se mantenga natural.
 - [x] Validar TypeScript/build y revisar visualmente la página principal antes de guardar checkpoint.
+
+## Actualizar GitHub — CArtoDataWeb2026
+
+- [ ] Revisar estado de Git local y confirmar si existe remoto configurado para `https://github.com/fmorenor/CArtoDataWeb2026`.
+- [ ] Preparar commit con los cambios actuales del proyecto CartoData Web 2026.
+- [ ] Enviar la rama actual al repositorio de GitHub indicado y verificar que el push finalice correctamente.
