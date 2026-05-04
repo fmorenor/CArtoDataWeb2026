@@ -34,6 +34,6 @@
 
 ## Reintento GitHub tras cambio de permisos
 
-- [ ] Revalidar el estado local y los permisos del repositorio después del cambio realizado por el usuario.
-- [ ] Reintentar el envío de `main` al remoto `fmorenor/CArtoDataWeb2026`.
-- [ ] Verificar en GitHub que el commit remoto apunte a la versión actual enviada.
+- [x] Revalidar el estado local y los permisos del repositorio después del cambio realizado por el usuario.
+- [x] Reintentar el envío de `main` al remoto `fmorenor/CArtoDataWeb2026`.
+- [x] Verificar en GitHub que el commit remoto apunte a la versión actual enviada.
