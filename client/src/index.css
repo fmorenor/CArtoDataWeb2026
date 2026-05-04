@@ -715,6 +715,141 @@ Design reminder — Neo-Brutalismo Cartográfico Corporativo: blanco operativo +
   border-color: var(--cd-red-bright);
 }
 
+.video-pleca {
+  position: relative;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: clamp(172px, 19vw, 285px);
+  gap: clamp(0.7rem, 1.5vw, 1.15rem);
+  width: min(100%, 1420px);
+  margin: clamp(1.25rem, 2.6vw, 2.1rem) auto 0;
+  padding: clamp(0.4rem, 1vw, 0.8rem) clamp(1rem, 3vw, 2rem) 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  mask-image: linear-gradient(90deg, transparent 0%, black 3%, black 97%, transparent 100%);
+}
+
+.video-pleca::-webkit-scrollbar { display: none; }
+
+.video-tile {
+  position: relative;
+  display: block;
+  aspect-ratio: 16 / 8.8;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.11);
+  background: #060707;
+  color: #ffffff;
+  box-shadow: 0 18px 54px rgba(0,0,0,0.32);
+  isolation: isolate;
+  transition: transform 220ms ease, border-color 220ms ease, opacity 220ms ease;
+}
+
+.video-tile::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(180deg, rgba(7,8,8,0.04) 0%, rgba(7,8,8,0.1) 44%, rgba(7,8,8,0.78) 100%),
+    linear-gradient(90deg, rgba(7,8,8,0.22), transparent 56%);
+  pointer-events: none;
+}
+
+.video-tile::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  border: 1px solid rgba(255,255,255,0.08);
+  pointer-events: none;
+}
+
+.video-tile:hover {
+  transform: translateY(-4px);
+  border-color: rgba(198,58,47,0.56);
+}
+
+.video-tile img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  filter: grayscale(0.18) contrast(1.05) saturate(0.92);
+  transform: scale(1.02);
+  transition: transform 380ms ease, filter 380ms ease;
+}
+
+.video-tile:hover img {
+  transform: scale(1.07);
+  filter: grayscale(0) contrast(1.08) saturate(1.02);
+}
+
+.video-duration,
+.video-play,
+.video-copy {
+  position: absolute;
+  z-index: 3;
+}
+
+.video-duration {
+  top: 0.55rem;
+  right: 0.55rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.28rem;
+  padding: 0.28rem 0.45rem;
+  border-radius: 999px;
+  background: rgba(7,8,8,0.68);
+  border: 1px solid rgba(255,255,255,0.18);
+  font-family: "Urbanist", "Poppins", sans-serif;
+  font-size: 0.62rem;
+  font-weight: 700;
+  color: rgba(255,255,255,0.92);
+  backdrop-filter: blur(14px);
+}
+
+.video-play {
+  top: 0.55rem;
+  left: 0.55rem;
+  display: grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.88);
+  color: #101111;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.22);
+}
+
+.video-copy {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: grid;
+  gap: 0.2rem;
+  padding: 0.75rem 0.78rem 0.68rem;
+}
+
+.video-copy strong {
+  font-family: "Urbanist", "Poppins", sans-serif;
+  font-size: clamp(0.72rem, 0.94vw, 0.9rem);
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+  font-weight: 850;
+  color: #ffffff;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.65);
+}
+
+.video-copy em {
+  font-size: 0.58rem;
+  line-height: 1.1;
+  font-style: normal;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.68);
+}
+
 .software-section {
   padding: clamp(4rem, 8vw, 8rem) clamp(1rem, 5vw, 5rem);
   background: linear-gradient(180deg, #101111 0%, #161818 52%, #111212 100%);

@@ -1,7 +1,7 @@
-# Todo — ajuste Cartomorfosis carrusel
+# Todo — pleca de videos Cartomorfosis
 
-- [x] Reemplazar la composición actual de Cartomorfosis por una sección centrada que respete la muestra: fondo oscuro, título compacto y carrusel horizontal.
-- [x] Eliminar los bloques textuales separados de Omnidata, Inteligencia y Profesionalización.
-- [x] Integrar Omnidata, Inteligencia y Profesionalización como slides/imágenes dentro del carrusel.
-- [x] Ajustar tamaños, proporciones, flechas, CTA y tipografía para aproximarse al formato de la referencia.
+- [x] Revisar el canal CartoDataTV para identificar videos o historias relacionadas con Cartomorfosis.
+- [x] Agregar debajo del carrusel de Cartomorfosis una pleca horizontal de miniaturas de video similar a la muestra.
+- [x] Mantener fondo oscuro, proporciones panorámicas, overlays discretos e iconografía de reproducción/reloj.
+- [x] Enlazar cada miniatura al video correspondiente de YouTube cuando sea posible.
 - [x] Validar TypeScript/build, revisar visualmente la sección y guardar checkpoint final.

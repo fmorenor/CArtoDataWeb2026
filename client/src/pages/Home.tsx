@@ -2,7 +2,7 @@
 Design reminder — Neo-Brutalismo Cartográfico Corporativo: blanco operativo + negro institucional, acentos guinda/rojo derivados de marca, módulos tipo visor, coordenadas, retículas discretas y composición asimétrica de firma premium.
 */
 
-import { ArrowUpRight, ChevronLeft, ChevronRight, Crosshair, Layers3, MapPinned, Menu, Radar, Sparkles, X } from "lucide-react";
+import { ArrowUpRight, ChevronLeft, ChevronRight, Clock, Crosshair, Layers3, MapPinned, Menu, Play, Radar, Sparkles, X } from "lucide-react";
 import { useEffect, useState } from "react";
 
 const A = {
@@ -74,6 +74,51 @@ const cartomorphosisSlides = [
     title: "Transferencia optimizada del conocimiento a procesos transformados",
     image: A.sectors,
     href: "#nosotros",
+  },
+];
+
+const cartomorphosisVideos = [
+  {
+    title: "Martín Guzmán · Talpa de Allende",
+    episode: "E06T01",
+    duration: "1:04:23",
+    href: "https://www.youtube.com/watch?v=klikWgJSn88",
+    image: "https://i.ytimg.com/vi/klikWgJSn88/hqdefault.jpg",
+  },
+  {
+    title: "Rodolfo González · Catastro Jalisco",
+    episode: "E05T01",
+    duration: "1:04:48",
+    href: "https://www.youtube.com/watch?v=qHNvsfGMGjg",
+    image: "https://i.ytimg.com/vi/qHNvsfGMGjg/hqdefault.jpg",
+  },
+  {
+    title: "Sandra Tovar · Guadalajara",
+    episode: "E04T01",
+    duration: "1:05:13",
+    href: "https://www.youtube.com/watch?v=3uLXVuX4IBM",
+    image: "https://i.ytimg.com/vi/3uLXVuX4IBM/hqdefault.jpg",
+  },
+  {
+    title: "Guillermo Hernández · Tlajomulco",
+    episode: "E03T01",
+    duration: "1:04:06",
+    href: "https://www.youtube.com/watch?v=aBGitpfN_KQ",
+    image: "https://i.ytimg.com/vi/aBGitpfN_KQ/hqdefault.jpg",
+  },
+  {
+    title: "Juan Carlos González · Transformación digital",
+    episode: "E02T01",
+    duration: "44:53",
+    href: "https://www.youtube.com/watch?v=v9eDa7PPj38",
+    image: "https://i.ytimg.com/vi/v9eDa7PPj38/hqdefault.jpg",
+  },
+  {
+    title: "José Luis Flores · INDETEC Brecha",
+    episode: "E07T01",
+    duration: "55:02",
+    href: "https://www.youtube.com/watch?v=L4WI0iW8B2k",
+    image: "https://i.ytimg.com/vi/L4WI0iW8B2k/hqdefault.jpg",
   },
 ];
 
@@ -197,6 +242,19 @@ function Impact() {
             aria-label={`Ver ${slide.eyebrow}`}
             aria-current={index === activeSlide ? "true" : undefined}
           />
+        ))}
+      </div>
+      <div className="video-pleca" aria-label="Historias de Cartomorfosis en CartoDataTV">
+        {cartomorphosisVideos.map((video) => (
+          <a className="video-tile" key={video.href} href={video.href} target="_blank" rel="noreferrer" aria-label={`Ver ${video.title} en YouTube`}>
+            <img src={video.image} alt={video.title} loading="lazy" />
+            <span className="video-duration"><Clock size={12} />{video.duration}</span>
+            <span className="video-play"><Play size={16} fill="currentColor" /></span>
+            <span className="video-copy">
+              <strong>{video.title}</strong>
+              <em>Historias de cartomorfosis · {video.episode}</em>
+            </span>
+          </a>
         ))}
       </div>
     </section>

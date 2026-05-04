@@ -27,3 +27,7 @@ Se reemplazó el primer hero por un placeholder visual de video/prompt de modelo
 ## Revisión Cartomorfosis — carrusel
 
 La sección Cartomorfosis ahora muestra un título centrado sobre fondo oscuro, con imagen principal grande, slides laterales visibles, flechas de navegación y puntos de selección. Los bloques separados de Omnidata, Inteligencia y Profesionalización fueron eliminados y ahora forman parte del carrusel como slides visuales. La validación técnica con `pnpm check` y `pnpm build` fue exitosa; la revisión visual confirmó que el CTA “Conocer más” ya usa formato pill y mantiene buena legibilidad sobre el fondo fotográfico.
+
+## Validación — pleca de videos Historias de Cartomorfosis
+
+Se agregó una pleca horizontal inmediatamente debajo del carrusel de **Cartomorfosis**, usando miniaturas públicas de YouTube del canal CartoDataTV para episodios de **Historias de cartomorfosis**. La revisión visual en `#impacto` confirma que la sección mantiene fondo antracita, proporciones horizontales similares a la referencia, miniaturas consecutivas, duración superpuesta, botón circular de reproducción, texto inferior compacto y enlaces directos a YouTube. La compilación `pnpm check && pnpm build` finalizó correctamente; Vite solo emitió una advertencia de tamaño de chunk ya existente/no bloqueante.
