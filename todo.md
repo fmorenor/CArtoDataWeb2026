@@ -52,3 +52,26 @@
 - [x] Actualizar rutas y navegación principal para apuntar a la nueva página.
 - [x] Retirar el bloque de Adquisición de Datos del home y revisar continuidad visual entre secciones.
 - [x] Validar TypeScript/build, guardar checkpoint y sincronizar GitHub.
+
+## Crear skill reutilizable del proceso aplicado
+
+- [x] Revisar patrones de creación de skills para workflows reutilizables.
+- [x] Inicializar una nueva skill con el generador oficial.
+- [x] Redactar SKILL.md con el proceso de separación de secciones en páginas independientes.
+- [x] Validar la skill con el validador oficial y corregir errores.
+- [x] Entregar la skill al usuario como archivo instalable.
+
+## Verificación tipográfica Urbanist y Poppins
+
+- [x] Revisar `client/index.html` para confirmar preconnect y enlace de Google Fonts.
+- [x] Revisar `client/src/index.css` para confirmar uso de Poppins y Urbanist.
+- [x] Comparar la implementación contra el código de incrustación y clases CSS indicado.
+- [x] Informar si cumple exactamente, parcialmente o no cumple.
+
+## Ajuste de menú móvil iPhone
+
+- [x] Revisar la estructura actual del panel móvil y sus clases CSS.
+- [x] Rediseñar el menú móvil como panel translúcido menos invasivo con separación visual del fondo.
+- [x] Ajustar tamaños, espaciado y jerarquía tipográfica para evitar solapamientos.
+- [x] Validar TypeScript/build y guardar checkpoint del ajuste.
+- [ ] Entregar resumen del cambio y recomendaciones de revisión móvil.
