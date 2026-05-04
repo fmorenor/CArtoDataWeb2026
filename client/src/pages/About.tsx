@@ -26,6 +26,21 @@ const metrics = [
 
 function Header() {
   const [open, setOpen] = useState(false);
+  const [closing, setClosing] = useState(false);
+
+  const openMenu = () => {
+    setClosing(false);
+    setOpen(true);
+  };
+
+  const closeMenu = () => {
+    if (!open || closing) return;
+    setClosing(true);
+    window.setTimeout(() => {
+      setOpen(false);
+      setClosing(false);
+    }, 320);
+  };
 
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
@@ -45,17 +60,17 @@ function Header() {
         ))}
       </nav>
       <a className="nav-cta" href="mailto:contacto@cartodata.com?subject=Proyecto%20CartoData%202026">Conversemos</a>
-      <button className="menu-button" aria-label="Abrir menú" onClick={() => setOpen(true)}>
+      <button className="menu-button" aria-label="Abrir menú" onClick={openMenu}>
         <Menu size={20} />
       </button>
       {open && (
-        <div className="mobile-panel" role="dialog" aria-modal="true" aria-label="Menú móvil">
-          <button className="menu-close" aria-label="Cerrar menú" onClick={() => setOpen(false)}><X size={22} /></button>
+        <div className={`mobile-panel ${closing ? "mobile-panel--closing" : ""}`} role="dialog" aria-modal="true" aria-label="Menú móvil">
+          <button className="menu-close" aria-label="Cerrar menú" onClick={closeMenu}><X size={22} /></button>
           <img src={A.logo} alt="CartoData" />
           {navItems.map((item) => (
-            <a key={item.href} href={item.href} onClick={() => setOpen(false)}>{item.label}</a>
+            <a key={item.href} href={item.href} onClick={closeMenu}>{item.label}</a>
           ))}
-          <a className="mobile-cta" href="mailto:contacto@cartodata.com?subject=Proyecto%20CartoData%202026">Iniciar diagnóstico</a>
+          <a className="mobile-cta" href="mailto:contacto@cartodata.com?subject=Proyecto%20CartoData%202026" onClick={closeMenu}>Iniciar diagnóstico</a>
         </div>
       )}
     </header>

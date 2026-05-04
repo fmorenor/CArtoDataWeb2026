@@ -75,3 +75,11 @@
 - [x] Ajustar tamaños, espaciado y jerarquía tipográfica para evitar solapamientos.
 - [x] Validar TypeScript/build y guardar checkpoint del ajuste.
 - [ ] Entregar resumen del cambio y recomendaciones de revisión móvil.
+
+## Animación fluida del menú móvil
+
+- [x] Revisar la lógica actual de montaje/desmontaje del menú móvil.
+- [x] Implementar transición suave de apertura y cierre sin desaparición abrupta.
+- [x] Ajustar CSS de keyframes y estados visuales para mantener el panel translúcido.
+- [x] Validar TypeScript/build y guardar checkpoint del refinamiento.
+- [ ] Entregar resumen del ajuste de animación.
