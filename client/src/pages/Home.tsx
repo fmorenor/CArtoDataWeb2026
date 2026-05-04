@@ -2,7 +2,7 @@
 Design reminder — Neo-Brutalismo Cartográfico Corporativo: blanco operativo + negro institucional, acentos guinda/rojo derivados de marca, módulos tipo visor, coordenadas, retículas discretas y composición asimétrica de firma premium.
 */
 
-import { ArrowUpRight, Crosshair, Database, Layers3, MapPinned, Menu, Radar, ScanLine, Satellite, ShieldCheck, Sparkles, X } from "lucide-react";
+import { ArrowUpRight, ChevronLeft, ChevronRight, Crosshair, Layers3, MapPinned, Menu, Radar, Sparkles, X } from "lucide-react";
 import { useEffect, useState } from "react";
 
 const A = {
@@ -50,21 +50,30 @@ const sectors = [
   { name: "Minería", icon: A.iconMineria, className: "tile-four" },
 ];
 
-const impactCards = [
+const cartomorphosisSlides = [
+  {
+    eyebrow: "Cartomorfosis",
+    title: "Cómo El Salvador está impulsando el crecimiento y la eficiencia",
+    image: A.collage,
+    href: "#adquisicion",
+  },
   {
     eyebrow: "Omnidata",
-    title: "Adquisición simultánea de información aérea y terrestre.",
-    icon: Satellite,
+    title: "Adquisición simultánea de información aérea y terrestre",
+    image: A.panel,
+    href: "#adquisicion",
   },
   {
     eyebrow: "Inteligencia",
-    title: "Software personalizado a los retos de las áreas y procesos.",
-    icon: Database,
+    title: "Software personalizado a los retos de las áreas y procesos",
+    image: A.eCartoBanner,
+    href: "#software",
   },
   {
     eyebrow: "Profesionalización",
-    title: "Transferencia optimizada del conocimiento a procesos transformados.",
-    icon: ShieldCheck,
+    title: "Transferencia optimizada del conocimiento a procesos transformados",
+    image: A.sectors,
+    href: "#nosotros",
   },
 ];
 
@@ -142,30 +151,53 @@ function Hero() {
 }
 
 function Impact() {
+  const [activeSlide, setActiveSlide] = useState(0);
+  const currentSlide = cartomorphosisSlides[activeSlide];
+  const previousSlide = cartomorphosisSlides[(activeSlide - 1 + cartomorphosisSlides.length) % cartomorphosisSlides.length];
+  const nextSlide = cartomorphosisSlides[(activeSlide + 1) % cartomorphosisSlides.length];
+
+  const goToPrevious = () => setActiveSlide((index) => (index - 1 + cartomorphosisSlides.length) % cartomorphosisSlides.length);
+  const goToNext = () => setActiveSlide((index) => (index + 1) % cartomorphosisSlides.length);
+
   return (
     <section className="dark-section cartomorfosis" id="impacto">
-      <div className="section-head center-head">
-        <p className="section-kicker light"><ScanLine size={15} /> Cartomorfosis</p>
-        <h2>Cartografía que trasciende el mapa, que transforma realidades.</h2>
+      <div className="cartomorfosis-title">
+        <h2><strong>Cartomorfosis:</strong><br />Cartografía que trasciende el mapa, que transforma realidades.</h2>
       </div>
-      <div className="feature-stage">
-        <img className="stage-image" src={A.collage} alt="Collage geoespacial de territorio, ciudad, agricultura y minería" />
-        <div className="stage-overlay">
-          <p>Cómo El Salvador está impulsando el crecimiento y la eficiencia con inteligencia territorial.</p>
-          <a href="#adquisicion">Conocer más <ArrowUpRight size={16} /></a>
-        </div>
+      <div className="cartomorfosis-carousel" aria-label="Carrusel Cartomorfosis">
+        <button className="carousel-arrow carousel-arrow-left" onClick={goToPrevious} aria-label="Ver caso anterior">
+          <ChevronLeft size={32} />
+        </button>
+        <article className="carousel-side carousel-side-left" aria-hidden="true">
+          <img src={previousSlide.image} alt="" />
+        </article>
+        <article className="feature-stage carousel-main" aria-live="polite">
+          <img className="stage-image" src={currentSlide.image} alt={currentSlide.title} />
+          <div className="stage-overlay">
+            <div>
+              <span>{currentSlide.eyebrow}</span>
+              <p>{currentSlide.title}</p>
+            </div>
+            <a href={currentSlide.href}>Conocer más <ArrowUpRight size={16} /></a>
+          </div>
+        </article>
+        <article className="carousel-side carousel-side-right" aria-hidden="true">
+          <img src={nextSlide.image} alt="" />
+        </article>
+        <button className="carousel-arrow carousel-arrow-right" onClick={goToNext} aria-label="Ver caso siguiente">
+          <ChevronRight size={32} />
+        </button>
       </div>
-      <div className="impact-grid">
-        {impactCards.map((card) => {
-          const Icon = card.icon;
-          return (
-            <article key={card.eyebrow} className="impact-card">
-              <Icon size={22} />
-              <p>{card.eyebrow}</p>
-              <h3>{card.title}</h3>
-            </article>
-          );
-        })}
+      <div className="carousel-dots" aria-label="Seleccionar slide de Cartomorfosis">
+        {cartomorphosisSlides.map((slide, index) => (
+          <button
+            key={slide.eyebrow}
+            className={index === activeSlide ? "is-active" : ""}
+            onClick={() => setActiveSlide(index)}
+            aria-label={`Ver ${slide.eyebrow}`}
+            aria-current={index === activeSlide ? "true" : undefined}
+          />
+        ))}
       </div>
     </section>
   );

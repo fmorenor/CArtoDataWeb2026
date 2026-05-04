@@ -23,3 +23,7 @@ La sección Nosotros mantiene un cierre sobrio sobre fondo claro, con métricas 
 ## Ajuste de header CartoIA 1.0
 
 Se reemplazó el primer hero por un placeholder visual de video/prompt de modelo de lenguaje. El primer viewport conserva fondo claro, retícula cartográfica muy sutil, tarjeta de prompt centrada y etiqueta de modelo **CartoIA 1.0**. La navegación permanece visible y el manifiesto principal de inteligencia geoespacial queda inmediatamente debajo, de modo que el bloque superior puede sustituirse más adelante por un video real sin reestructurar el resto de la página.
+
+## Revisión Cartomorfosis — carrusel
+
+La sección Cartomorfosis ahora muestra un título centrado sobre fondo oscuro, con imagen principal grande, slides laterales visibles, flechas de navegación y puntos de selección. Los bloques separados de Omnidata, Inteligencia y Profesionalización fueron eliminados y ahora forman parte del carrusel como slides visuales. La validación técnica con `pnpm check` y `pnpm build` fue exitosa; la revisión visual confirmó que el CTA “Conocer más” ya usa formato pill y mantiene buena legibilidad sobre el fondo fotográfico.

@@ -514,10 +514,11 @@ Design reminder — Neo-Brutalismo Cartográfico Corporativo: blanco operativo +
 }
 
 .cartomorfosis {
-  padding: clamp(4rem, 8vw, 8rem) clamp(1rem, 5vw, 5rem);
+  padding: clamp(3rem, 6vw, 5.6rem) 0 clamp(3rem, 6vw, 5.5rem);
   background:
-    radial-gradient(circle at 15% 10%, rgba(78,22,21,0.34), transparent 28rem),
+    radial-gradient(circle at 16% 12%, rgba(78,22,21,0.22), transparent 24rem),
     linear-gradient(180deg, #171818 0%, #101111 100%);
+  overflow: hidden;
 }
 
 .section-head h2,
@@ -537,13 +538,46 @@ Design reminder — Neo-Brutalismo Cartográfico Corporativo: blanco operativo +
 
 .center-head h2 { font-size: clamp(2.3rem, 5vw, 5.7rem); line-height: 0.96; }
 
+.cartomorfosis-title {
+  max-width: 920px;
+  margin: 0 auto clamp(1.9rem, 3vw, 2.6rem);
+  padding: 0 1.5rem;
+  text-align: center;
+}
+
+.cartomorfosis-title h2 {
+  margin: 0;
+  font-family: "Urbanist", "Poppins", sans-serif;
+  font-size: clamp(2.05rem, 4.1vw, 4.85rem);
+  line-height: 0.98;
+  letter-spacing: -0.055em;
+  font-weight: 500;
+  color: #f6f2ea;
+}
+
+.cartomorfosis-title strong {
+  display: inline-block;
+  font-weight: 850;
+}
+
+.cartomorfosis-carousel {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(70px, 0.35fr) minmax(280px, 2.5fr) minmax(70px, 0.35fr);
+  align-items: stretch;
+  gap: clamp(0.8rem, 2.4vw, 2rem);
+  width: min(100%, 1420px);
+  margin: 0 auto;
+  padding: 0 clamp(0.8rem, 3vw, 2rem);
+}
+
 .feature-stage {
   position: relative;
-  max-width: 1180px;
+  max-width: 100%;
   margin: 0 auto;
-  min-height: clamp(320px, 52vw, 670px);
+  min-height: clamp(255px, 31vw, 520px);
   overflow: hidden;
-  border: 1px solid rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.18);
   background: #090909;
   box-shadow: 0 35px 110px rgba(0,0,0,0.45);
 }
@@ -554,7 +588,7 @@ Design reminder — Neo-Brutalismo Cartográfico Corporativo: blanco operativo +
   min-height: inherit;
   object-fit: cover;
   display: block;
-  opacity: 0.86;
+  opacity: 0.9;
   transition: transform 700ms ease, opacity 700ms ease;
 }
 
@@ -562,45 +596,124 @@ Design reminder — Neo-Brutalismo Cartográfico Corporativo: blanco operativo +
 
 .stage-overlay {
   position: absolute;
-  inset: auto 1.2rem 1.2rem 1.2rem;
+  inset: 0;
   display: flex;
   justify-content: space-between;
   gap: 1rem;
   align-items: end;
-  padding: clamp(1rem, 3vw, 2rem);
-  background: linear-gradient(90deg, rgba(7,8,8,0.88), rgba(7,8,8,0.35));
-  border: 1px solid rgba(255,255,255,0.12);
+  padding: clamp(1.1rem, 3vw, 2.15rem);
+  background:
+    linear-gradient(180deg, rgba(7,8,8,0.08) 0%, rgba(7,8,8,0.18) 38%, rgba(7,8,8,0.82) 100%),
+    linear-gradient(90deg, rgba(7,8,8,0.68), transparent 42%, rgba(7,8,8,0.34));
+}
+
+.stage-overlay span {
+  display: block;
+  margin: 0 0 0.65rem;
+  color: #ffffff;
+  font-family: "Urbanist", "Poppins", sans-serif;
+  font-size: clamp(0.72rem, 1vw, 0.96rem);
+  font-weight: 850;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  text-shadow: 0 2px 16px rgba(0,0,0,0.55);
 }
 
 .stage-overlay p {
-  max-width: 670px;
+  max-width: 760px;
   margin: 0;
-  font-size: clamp(1rem, 2vw, 1.8rem);
-  line-height: 1.24;
-  font-weight: 700;
+  color: #ffffff;
+  font-family: "Urbanist", "Poppins", sans-serif;
+  font-size: clamp(1.15rem, 2.35vw, 2.25rem);
+  line-height: 0.98;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 900;
+  text-shadow: 0 2px 18px rgba(0,0,0,0.64);
 }
 
-.impact-grid {
+.stage-overlay a {
+  flex: 0 0 auto;
+  margin-bottom: 0.1rem;
+  border-radius: 999px;
+  padding-inline: 1.45rem;
+  box-shadow: 0 12px 34px rgba(198,58,47,0.28);
+}
+
+.carousel-side {
+  position: relative;
+  min-height: clamp(255px, 31vw, 520px);
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.08);
+  background: #080909;
+  opacity: 0.42;
+  filter: saturate(0.72) contrast(1.08);
+}
+
+.carousel-side img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  opacity: 0.78;
+}
+
+.carousel-side-left img { object-position: left center; }
+.carousel-side-right img { object-position: right center; }
+
+.carousel-side::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(7,8,8,0.52);
+}
+
+.carousel-arrow {
+  position: absolute;
+  z-index: 5;
+  top: 50%;
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1px;
-  max-width: 1180px;
-  margin: clamp(2rem, 4vw, 3.5rem) auto 0;
-  background: rgba(255,255,255,0.12);
-  border: 1px solid rgba(255,255,255,0.12);
+  place-items: center;
+  width: 3rem;
+  height: 3rem;
+  border: 0;
+  border-radius: 999px;
+  transform: translateY(-50%);
+  background: rgba(7,8,8,0.16);
+  color: #ffffff;
+  transition: color 180ms ease, transform 180ms ease, background 180ms ease;
 }
 
-.impact-card {
-  min-height: 230px;
-  padding: clamp(1.3rem, 3vw, 2rem);
-  background: rgba(18,19,19,0.96);
-  transition: background 180ms ease, transform 180ms ease;
+.carousel-arrow:hover {
+  color: var(--cd-red-bright);
+  background: rgba(7,8,8,0.48);
+  transform: translateY(-50%) scale(1.06);
 }
 
-.impact-card:hover { background: #1e1f1f; transform: translateY(-3px); }
-.impact-card svg { color: #cf4b41; }
-.impact-card p { margin: 3.5rem 0 0.8rem; color: #b7b1a6; font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; }
-.impact-card h3 { margin: 0; font-size: clamp(1.2rem, 2vw, 1.7rem); line-height: 1.18; letter-spacing: -0.04em; }
+.carousel-arrow-left { left: calc(50% - min(48vw, 590px)); }
+.carousel-arrow-right { right: calc(50% - min(48vw, 590px)); }
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.45rem;
+  margin-top: 1rem;
+}
+
+.carousel-dots button {
+  width: 0.45rem;
+  height: 0.45rem;
+  border: 1px solid rgba(255,255,255,0.45);
+  border-radius: 999px;
+  background: transparent;
+  transition: width 180ms ease, background 180ms ease, border-color 180ms ease;
+}
+
+.carousel-dots button.is-active {
+  width: 1.8rem;
+  background: var(--cd-red-bright);
+  border-color: var(--cd-red-bright);
+}
 
 .software-section {
   padding: clamp(4rem, 8vw, 8rem) clamp(1rem, 5vw, 5rem);
@@ -913,7 +1026,10 @@ Design reminder — Neo-Brutalismo Cartográfico Corporativo: blanco operativo +
   .acquisition-layout,
   .about-panel { grid-template-columns: 1fr; }
   .prompt-card { justify-self: center; }
-  .impact-grid,
+  .cartomorfosis-carousel { grid-template-columns: 1fr; padding-inline: 1rem; }
+  .carousel-side { display: none; }
+  .carousel-arrow-left { left: 1.25rem; }
+  .carousel-arrow-right { right: 1.25rem; }
   .metric-grid { grid-template-columns: 1fr; }
   .sector-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .data-panel img { min-height: 430px; }
@@ -924,7 +1040,10 @@ Design reminder — Neo-Brutalismo Cartográfico Corporativo: blanco operativo +
   .hero-manifest { padding-top: 3.25rem; }
   .hero-copy h1 { font-size: clamp(3.1rem, 17vw, 5.7rem); }
   .prompt-card { padding: 1rem; }
-  .stage-overlay { position: static; flex-direction: column; align-items: flex-start; background: #0b0c0c; }
+  .cartomorfosis-title h2 { font-size: clamp(2rem, 9vw, 3.35rem); }
+  .feature-stage { min-height: 330px; }
+  .stage-overlay { flex-direction: column; align-items: flex-start; justify-content: end; }
+  .stage-overlay a { align-self: flex-start; }
   .software-products,
   .sector-grid,
   .footer-main { grid-template-columns: 1fr; }
