@@ -42,5 +42,5 @@
 
 - [x] Auditar si existen imágenes versionadas dentro del repositorio y cómo están referenciadas en el código.
 - [x] Crear un README.md profesional con descripción, instalación, estructura, scripts y notas de assets.
-- [ ] Commit y push del README al repositorio `fmorenor/CArtoDataWeb2026`.
-- [ ] Informar claramente si las imágenes están en Git o si se consumen desde URLs/almacenamiento externo.
+- [x] Commit y push del README al repositorio `fmorenor/CArtoDataWeb2026`.
+- [x] Informar claramente si las imágenes están en Git o si se consumen desde URLs/almacenamiento externo.
