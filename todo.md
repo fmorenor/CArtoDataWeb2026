@@ -51,4 +51,4 @@
 - [x] Crear una página independiente accesible desde el menú para Adquisición de Datos con el contenido existente.
 - [x] Actualizar rutas y navegación principal para apuntar a la nueva página.
 - [x] Retirar el bloque de Adquisición de Datos del home y revisar continuidad visual entre secciones.
-- [ ] Validar TypeScript/build, guardar checkpoint y sincronizar GitHub.
+- [x] Validar TypeScript/build, guardar checkpoint y sincronizar GitHub.
