@@ -37,3 +37,10 @@
 - [x] Revalidar el estado local y los permisos del repositorio después del cambio realizado por el usuario.
 - [x] Reintentar el envío de `main` al remoto `fmorenor/CArtoDataWeb2026`.
 - [x] Verificar en GitHub que el commit remoto apunte a la versión actual enviada.
+
+## Revisar imágenes y crear README
+
+- [x] Auditar si existen imágenes versionadas dentro del repositorio y cómo están referenciadas en el código.
+- [x] Crear un README.md profesional con descripción, instalación, estructura, scripts y notas de assets.
+- [ ] Commit y push del README al repositorio `fmorenor/CArtoDataWeb2026`.
+- [ ] Informar claramente si las imágenes están en Git o si se consumen desde URLs/almacenamiento externo.
