@@ -19,3 +19,7 @@ Se generaron copias con nombres seguros para web de los assets con espacios, se 
 ## Revisión de cierre y footer
 
 La sección Nosotros mantiene un cierre sobrio sobre fondo claro, con métricas corporativas, coordenadas y narrativa de marca basada en el manual de identidad. El footer conserva el contraste oscuro de la referencia, usa el logotipo en blanco, navegación compacta y bloque de dirección con latitud/longitud. Se validó que el sitio alcanza correctamente el final de página y que los enlaces principales están presentes.
+
+## Ajuste de header CartoIA 1.0
+
+Se reemplazó el primer hero por un placeholder visual de video/prompt de modelo de lenguaje. El primer viewport conserva fondo claro, retícula cartográfica muy sutil, tarjeta de prompt centrada y etiqueta de modelo **CartoIA 1.0**. La navegación permanece visible y el manifiesto principal de inteligencia geoespacial queda inmediatamente debajo, de modo que el bloque superior puede sustituirse más adelante por un video real sin reestructurar el resto de la página.

@@ -245,8 +245,9 @@ Design reminder — Neo-Brutalismo Cartográfico Corporativo: blanco operativo +
   isolation: isolate;
   min-height: 100svh;
   background:
-    radial-gradient(circle at 78% 24%, rgba(146,148,151,0.13), transparent 34rem),
-    linear-gradient(180deg, #f8f7f3 0%, var(--cd-paper) 78%);
+    radial-gradient(circle at 50% 38%, rgba(255,255,255,0.9), transparent 27rem),
+    radial-gradient(circle at 78% 24%, rgba(146,148,151,0.10), transparent 34rem),
+    linear-gradient(180deg, #fbfaf7 0%, var(--cd-paper) 78%);
   overflow: hidden;
 }
 
@@ -262,12 +263,48 @@ Design reminder — Neo-Brutalismo Cartográfico Corporativo: blanco operativo +
   mask-image: linear-gradient(to bottom, transparent, black 20%, black 70%, transparent);
 }
 
-.hero-grid {
+.hero-video-placeholder {
+  position: relative;
+  min-height: clamp(430px, 61svh, 690px);
   display: grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
-  gap: clamp(2rem, 7vw, 8rem);
-  align-items: center;
-  padding: clamp(5rem, 11vw, 10rem) clamp(1rem, 5vw, 5rem) 2rem;
+  place-items: center;
+  padding: clamp(5.5rem, 10vw, 8.5rem) clamp(1rem, 5vw, 5rem) clamp(3rem, 6vw, 5rem);
+}
+
+.hero-video-placeholder::before {
+  content: "";
+  position: absolute;
+  inset: clamp(1.2rem, 4vw, 4rem);
+  border: 1px solid rgba(17,18,18,0.035);
+  background:
+    linear-gradient(rgba(17,18,18,0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(17,18,18,0.025) 1px, transparent 1px);
+  background-size: 68px 68px;
+  mask-image: radial-gradient(circle at center, black 0%, black 38%, transparent 72%);
+  pointer-events: none;
+}
+
+.hero-video-placeholder::after {
+  content: "VIDEO PLACEHOLDER · CARTOIA PROMPT";
+  position: absolute;
+  bottom: clamp(1.1rem, 2vw, 2.2rem);
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgba(17,18,18,0.22);
+  font-family: "Urbanist", "Poppins", sans-serif;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  white-space: nowrap;
+}
+
+.hero-manifest {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1.1fr);
+  gap: clamp(2rem, 6vw, 7rem);
+  align-items: end;
+  padding: clamp(3rem, 8vw, 8rem) clamp(1rem, 5vw, 5rem) clamp(4rem, 8vw, 7rem);
+  border-top: 1px solid rgba(17,18,18,0.08);
 }
 
 .hero-copy {
@@ -357,15 +394,31 @@ Design reminder — Neo-Brutalismo Cartográfico Corporativo: blanco operativo +
 
 .prompt-card {
   position: relative;
-  align-self: end;
-  max-width: 600px;
-  margin-top: 6rem;
-  padding: 1.25rem;
-  background: rgba(255,255,255,0.76);
+  width: min(100%, 675px);
+  padding: clamp(1rem, 2vw, 1.25rem);
+  background: rgba(255,255,255,0.86);
   border: 1px solid rgba(0,0,0,0.075);
   box-shadow: 0 24px 70px rgba(17,18,18,0.12);
   backdrop-filter: blur(28px);
   animation: rise-in 820ms ease 160ms both;
+}
+
+.video-prompt {
+  border-radius: 14px;
+  box-shadow:
+    0 26px 80px rgba(17,18,18,0.11),
+    0 2px 8px rgba(17,18,18,0.045),
+    inset 0 1px 0 rgba(255,255,255,0.92);
+  transform: translateY(1.2rem);
+}
+
+.video-prompt::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  border: 1px solid rgba(255,255,255,0.9);
+  pointer-events: none;
 }
 
 .prompt-toolbar {
@@ -383,19 +436,27 @@ Design reminder — Neo-Brutalismo Cartográfico Corporativo: blanco operativo +
 
 .prompt-card p {
   margin: 0;
-  color: rgba(17,18,18,0.78);
-  line-height: 1.62;
-  font-size: clamp(0.9rem, 1vw, 1rem);
+  color: rgba(17,18,18,0.82);
+  line-height: 1.52;
+  font-size: clamp(0.86rem, 0.95vw, 0.98rem);
+  letter-spacing: -0.015em;
 }
 
 .prompt-footer {
-  display: flex;
-  justify-content: flex-end;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
   align-items: center;
   gap: 0.8rem;
-  margin-top: 1.2rem;
+  margin-top: 1.05rem;
   color: rgba(17,18,18,0.48);
   font-size: 0.72rem;
+}
+
+.model-name {
+  justify-self: end;
+  color: rgba(17,18,18,0.54);
+  font-weight: 600;
+  letter-spacing: -0.01em;
 }
 
 .prompt-footer button {
@@ -404,16 +465,17 @@ Design reminder — Neo-Brutalismo Cartográfico Corporativo: blanco operativo +
   width: 2.05rem;
   height: 2.05rem;
   border: 0;
-  background: var(--cd-red);
+  border-radius: 8px;
+  background: var(--cd-red-bright);
   color: white;
+  box-shadow: 0 6px 16px rgba(138,34,38,0.25);
 }
 
 .hero-visual {
   position: relative;
-  margin: clamp(1rem, 4vw, 4rem) clamp(1rem, 5vw, 5rem) clamp(3rem, 8vw, 7rem);
   border: 1px solid rgba(17,18,18,0.12);
   background: var(--cd-black);
-  min-height: clamp(260px, 38vw, 610px);
+  min-height: clamp(260px, 34vw, 560px);
   overflow: hidden;
   box-shadow: 0 35px 90px rgba(0,0,0,0.24);
 }
@@ -846,11 +908,11 @@ Design reminder — Neo-Brutalismo Cartográfico Corporativo: blanco operativo +
   .mobile-panel img { width: 170px; margin-bottom: 2rem; }
   .mobile-panel a:not(.mobile-cta) { font-size: 2.2rem; font-family: "Urbanist", sans-serif; font-weight: 800; letter-spacing: -0.05em; }
   .menu-close { display: grid; place-items: center; align-self: flex-end; }
-  .hero-grid,
+  .hero-manifest,
   .split-head,
   .acquisition-layout,
   .about-panel { grid-template-columns: 1fr; }
-  .prompt-card { margin-top: 0; justify-self: start; }
+  .prompt-card { justify-self: center; }
   .impact-grid,
   .metric-grid { grid-template-columns: 1fr; }
   .sector-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -858,7 +920,8 @@ Design reminder — Neo-Brutalismo Cartográfico Corporativo: blanco operativo +
 }
 
 @media (max-width: 720px) {
-  .hero-grid { padding-top: 3.5rem; }
+  .hero-video-placeholder { min-height: 420px; padding-top: 4.8rem; }
+  .hero-manifest { padding-top: 3.25rem; }
   .hero-copy h1 { font-size: clamp(3.1rem, 17vw, 5.7rem); }
   .prompt-card { padding: 1rem; }
   .stage-overlay { position: static; flex-direction: column; align-items: flex-start; background: #0b0c0c; }

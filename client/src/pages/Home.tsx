@@ -110,7 +110,17 @@ function Hero() {
   return (
     <section className="hero-section" id="top">
       <Header />
-      <div className="hero-grid">
+      <div className="hero-video-placeholder" aria-label="Video simulado de prompt CartoIA 1.0">
+        <div className="prompt-card video-prompt" aria-label="Consulta estratégica a CartoIA">
+          <p>¿Eres un experto en cartografía, con un enfoque en software geoespacial y especialidad en reingeniería de procesos, cómo puedo tomar mejores decisiones con mapas?</p>
+          <div className="prompt-footer">
+            <span>+</span>
+            <span className="model-name">CartoIA 1.0</span>
+            <button aria-label="Enviar consulta"><ArrowUpRight size={16} /></button>
+          </div>
+        </div>
+      </div>
+      <div className="hero-manifest">
         <div className="hero-copy">
           <p className="section-kicker"><Crosshair size={15} /> Cartografía aplicada a decisiones críticas</p>
           <h1>Inteligencia geoespacial para transformar territorio, procesos y operación.</h1>
@@ -122,18 +132,10 @@ function Hero() {
             <a className="secondary-link" href="#impacto">Ver impacto</a>
           </div>
         </div>
-        <div className="prompt-card" aria-label="Consulta estratégica">
-          <div className="prompt-toolbar"><span /> <span /> <span /></div>
-          <p>¿Eres un experto en cartografía con un enfoque en software geoespacial y especialidad en reingeniería de procesos, cómo puedo tomar mejores decisiones con mapas?</p>
-          <div className="prompt-footer">
-            <span>Sonnet 4.5</span>
-            <button aria-label="Enviar consulta"><ArrowUpRight size={16} /></button>
-          </div>
+        <div className="hero-visual" aria-hidden="true">
+          <img src={A.hero} alt="" />
+          <div className="coordinate-chip">LAT 20.6723 · LON -103.4524</div>
         </div>
-      </div>
-      <div className="hero-visual" aria-hidden="true">
-        <img src={A.hero} alt="" />
-        <div className="coordinate-chip">LAT 20.6723 · LON -103.4524</div>
       </div>
     </section>
   );
