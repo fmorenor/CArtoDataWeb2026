@@ -1,7 +1,7 @@
-# Todo — pleca de videos Cartomorfosis
+# Todo — ajuste sección eCarto
 
-- [x] Revisar el canal CartoDataTV para identificar videos o historias relacionadas con Cartomorfosis.
-- [x] Agregar debajo del carrusel de Cartomorfosis una pleca horizontal de miniaturas de video similar a la muestra.
-- [x] Mantener fondo oscuro, proporciones panorámicas, overlays discretos e iconografía de reproducción/reloj.
-- [x] Enlazar cada miniatura al video correspondiente de YouTube cuando sea posible.
-- [x] Validar TypeScript/build, revisar visualmente la sección y guardar checkpoint final.
+- [ ] Revisar la estructura actual de eCarto para ubicar el bloque principal, carrusel y tarjetas inferiores.
+- [ ] Ajustar la sección a un bloque oscuro compacto como la referencia, con título eCarto, subtítulo y CTA centrados.
+- [ ] Convertir únicamente la imagen azul principal de eCarto en carrusel visual, con flechas laterales y puntos inferiores.
+- [ ] Conservar las tarjetas inferiores de eCarto on premise y CartoData Cloud, manteniendo sus imágenes actuales.
+- [ ] Validar TypeScript/build, revisar visualmente la sección y guardar checkpoint final.

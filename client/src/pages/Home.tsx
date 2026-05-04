@@ -77,6 +77,11 @@ const cartomorphosisSlides = [
   },
 ];
 
+const eCartoSlides = [
+  { image: A.eCartoStart, alt: "Pantalla de acceso azul de eCarto Cloud Services" },
+  { image: A.eCartoBanner, alt: "Vista de producto eCarto para información geoespacial" },
+];
+
 const cartomorphosisVideos = [
   {
     title: "Martín Guzmán · Talpa de Allende",
@@ -262,16 +267,40 @@ function Impact() {
 }
 
 function Software() {
+  const [activeEcartoSlide, setActiveEcartoSlide] = useState(0);
+  const currentEcartoSlide = eCartoSlides[activeEcartoSlide];
+  const goToPrevious = () => setActiveEcartoSlide((index) => (index - 1 + eCartoSlides.length) % eCartoSlides.length);
+  const goToNext = () => setActiveEcartoSlide((index) => (index + 1) % eCartoSlides.length);
+
   return (
     <section className="software-section" id="software">
-      <div className="software-intro">
-        <p>Posiciona herramientas todo en un concepto ágil y escalable de información geoespacial.</p>
-        <h2>eCarto</h2>
-        <a href="mailto:contacto@cartodata.com?subject=Conocer%20eCarto">Conocer más <ArrowUpRight size={15} /></a>
-      </div>
-      <div className="software-console">
-        <img src={A.eCartoStart} alt="Interfaz de acceso de eCarto" />
-        <div className="console-frame" />
+      <div className="software-panel">
+        <div className="software-intro">
+          <p>Poderosa herramienta todo en uno: compila, edita y accede a información geoespacial.</p>
+          <h2>eCarto</h2>
+          <a href="mailto:contacto@cartodata.com?subject=Conocer%20eCarto">Conocer más <ArrowUpRight size={15} /></a>
+        </div>
+        <div className="software-console" aria-label="Carrusel de pantallas eCarto">
+          <button className="software-arrow software-arrow-left" onClick={goToPrevious} aria-label="Ver pantalla anterior de eCarto">
+            <ChevronLeft size={22} />
+          </button>
+          <img src={currentEcartoSlide.image} alt={currentEcartoSlide.alt} />
+          <button className="software-arrow software-arrow-right" onClick={goToNext} aria-label="Ver pantalla siguiente de eCarto">
+            <ChevronRight size={22} />
+          </button>
+          <div className="console-frame" />
+        </div>
+        <div className="software-dots" aria-label="Seleccionar pantalla de eCarto">
+          {eCartoSlides.map((slide, index) => (
+            <button
+              key={slide.image}
+              className={index === activeEcartoSlide ? "is-active" : ""}
+              onClick={() => setActiveEcartoSlide(index)}
+              aria-label={`Ver pantalla ${index + 1} de eCarto`}
+              aria-current={index === activeEcartoSlide ? "true" : undefined}
+            />
+          ))}
+        </div>
       </div>
       <div className="software-products">
         <article>
@@ -285,11 +314,12 @@ function Software() {
           <img src={A.cloud} alt="eCarto Cloud sobre infraestructura de nube" />
           <div>
             <h3>CartoData Cloud</h3>
-            <p>Operación y consulta de información territorial desde la nube.</p>
+            <p>Tu operación donde la necesites desde la nube.</p>
             <img className="google-badge" src={A.google} alt="Powered by Google Cloud" />
           </div>
         </article>
       </div>
+      <p className="software-closing">Transformamos organizaciones reorganizando sus procesos con nuevos niveles de información por medio de la adquisición, análisis y procesamiento de información geoespacial precisa.</p>
     </section>
   );
 }

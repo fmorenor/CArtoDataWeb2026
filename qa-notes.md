@@ -31,3 +31,7 @@ La sección Cartomorfosis ahora muestra un título centrado sobre fondo oscuro, 
 ## Validación — pleca de videos Historias de Cartomorfosis
 
 Se agregó una pleca horizontal inmediatamente debajo del carrusel de **Cartomorfosis**, usando miniaturas públicas de YouTube del canal CartoDataTV para episodios de **Historias de cartomorfosis**. La revisión visual en `#impacto` confirma que la sección mantiene fondo antracita, proporciones horizontales similares a la referencia, miniaturas consecutivas, duración superpuesta, botón circular de reproducción, texto inferior compacto y enlaces directos a YouTube. La compilación `pnpm check && pnpm build` finalizó correctamente; Vite solo emitió una advertencia de tamaño de chunk ya existente/no bloqueante.
+
+## Revisión eCarto — carrusel de producto
+
+La sección `#software` carga correctamente después de la actualización. El bloque muestra un panel oscuro con degradado azul, título `eCarto`, CTA `Conocer más`, carrusel central de imágenes con flechas laterales y puntos de navegación. La interacción con el segundo punto cambia correctamente la imagen principal a la pantalla azul de eCarto Cloud Services. Las tarjetas `eCarto on premise` y `CartoData Cloud` permanecen debajo del carrusel, alineadas en dos columnas en escritorio, con texto centrado y fondo visual oscuro coherente con la referencia. El cierre textual aparece bajo las tarjetas, centrado y en tono crema.
