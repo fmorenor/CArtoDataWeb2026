@@ -28,9 +28,9 @@
 
 ## Actualizar GitHub — CArtoDataWeb2026
 
-- [ ] Revisar estado de Git local y confirmar si existe remoto configurado para `https://github.com/fmorenor/CArtoDataWeb2026`.
-- [ ] Preparar commit con los cambios actuales del proyecto CartoData Web 2026.
-- [ ] Enviar la rama actual al repositorio de GitHub indicado y verificar que el push finalice correctamente.
+- [x] Revisar estado de Git local y confirmar si existe remoto configurado para `https://github.com/fmorenor/CArtoDataWeb2026`.
+- [x] Preparar commit con los cambios actuales del proyecto CartoData Web 2026.
+- [x] Enviar la rama actual al repositorio de GitHub indicado y verificar que el push finalice correctamente.
 
 ## Reintento GitHub tras cambio de permisos
 
