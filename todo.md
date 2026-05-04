@@ -44,3 +44,11 @@
 - [x] Crear un README.md profesional con descripción, instalación, estructura, scripts y notas de assets.
 - [x] Commit y push del README al repositorio `fmorenor/CArtoDataWeb2026`.
 - [x] Informar claramente si las imágenes están en Git o si se consumen desde URLs/almacenamiento externo.
+
+## Separar Adquisición de Datos en página independiente
+
+- [x] Localizar el bloque actual de Adquisición de Datos en el home y sus estilos asociados.
+- [x] Crear una página independiente accesible desde el menú para Adquisición de Datos con el contenido existente.
+- [x] Actualizar rutas y navegación principal para apuntar a la nueva página.
+- [x] Retirar el bloque de Adquisición de Datos del home y revisar continuidad visual entre secciones.
+- [ ] Validar TypeScript/build, guardar checkpoint y sincronizar GitHub.

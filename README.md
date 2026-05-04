@@ -10,6 +10,7 @@ El diseño se desarrolló a partir de la identidad visual proporcionada para Car
 |---|---|
 | Página principal | Implementada con hero, Cartomorfosis, videos, eCarto y Sectores. |
 | Página Nosotros | Implementada como ruta independiente en `/nosotros`. |
+| Página Adquisición de Datos | Implementada como ruta independiente en `/adquisicion`, accesible desde el menú principal. |
 | Sectores | Las tarjetas enlazan a futuras rutas sectoriales, todavía no implementadas como páginas finales. |
 | Assets visuales | Referenciados desde almacenamiento externo y URLs remotas; no están versionados como archivos locales dentro del repositorio. |
 | Validación | El proyecto cuenta con scripts para chequeo TypeScript y build de producción. |
@@ -68,6 +69,7 @@ La aplicación pública vive principalmente en `client/src`. Las páginas de niv
 |---|---|---|
 | `/` | `Home.tsx` | Landing principal con propuesta corporativa, Cartomorfosis, eCarto y Sectores. |
 | `/nosotros` | `About.tsx` | Página institucional independiente de CartoData. |
+| `/adquisicion` | `Acquisition.tsx` | Página independiente para tecnologías y método de adquisición de datos. |
 | `/404` | `NotFound.tsx` | Página de error. |
 | `/sectores/catastro` | Pendiente | Enlace preparado desde la tarjeta de Catastro. |
 | `/sectores/desarrollo-urbano` | Pendiente | Enlace preparado desde la tarjeta de Desarrollo Urbano. |

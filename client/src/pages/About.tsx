@@ -13,7 +13,7 @@ const A = {
 
 const navItems = [
   { label: "Impacto", href: "/#impacto" },
-  { label: "Adquisición de Datos", href: "/#adquisicion" },
+  { label: "Adquisición de Datos", href: "/adquisicion" },
   { label: "Software", href: "/#software" },
   { label: "Nosotros", href: "/nosotros" },
 ];
@@ -69,7 +69,7 @@ function Footer() {
         <img src={A.logo} alt="CartoData" />
         <div className="footer-nav">
           <a href="/#impacto">Impacto</a>
-          <a href="/#adquisicion">Adquisición</a>
+          <a href="/adquisicion">Adquisición</a>
           <a href="/#software">Software</a>
           <a href="/nosotros">Nosotros</a>
         </div>

@@ -2,7 +2,7 @@
 Design reminder — Neo-Brutalismo Cartográfico Corporativo: blanco operativo + negro institucional, acentos guinda/rojo derivados de marca, módulos tipo visor, coordenadas, retículas discretas y composición asimétrica de firma premium.
 */
 
-import { ArrowUpRight, ChevronLeft, ChevronRight, Clock, Layers3, Menu, Play, Radar, Sparkles, X } from "lucide-react";
+import { ArrowUpRight, ChevronLeft, ChevronRight, Clock, Layers3, Menu, Play, Sparkles, X } from "lucide-react";
 import { useEffect, useState } from "react";
 
 const A = {
@@ -25,16 +25,9 @@ const A = {
 
 const navItems = [
   { label: "Impacto", href: "/#impacto" },
-  { label: "Adquisición de Datos", href: "/#adquisicion" },
+  { label: "Adquisición de Datos", href: "/adquisicion" },
   { label: "Software", href: "/#software" },
   { label: "Nosotros", href: "/nosotros" },
-];
-
-const acquisition = [
-  { title: "LiDAR", detail: "Nubes de puntos para medir, modelar y tomar decisiones con precisión." },
-  { title: "Drone", detail: "Levantamientos rápidos para proyectos urbanos, agrícolas e industriales." },
-  { title: "Oblix", detail: "Captura oblicua para crear gemelos digitales comprensibles." },
-  { title: "Visión 360", detail: "Recorridos inmersivos para documentar activos y procesos." },
 ];
 
 const sectors = [
@@ -49,13 +42,13 @@ const cartomorphosisSlides = [
     eyebrow: "Cartomorfosis",
     title: "Cómo El Salvador está impulsando el crecimiento y la eficiencia",
     image: A.collage,
-    href: "#adquisicion",
+    href: "/adquisicion",
   },
   {
     eyebrow: "Omnidata",
     title: "Adquisición simultánea de información aérea y terrestre",
     image: A.panel,
-    href: "#adquisicion",
+    href: "/adquisicion",
   },
   {
     eyebrow: "Inteligencia",
@@ -301,36 +294,6 @@ function Software() {
   );
 }
 
-function Acquisition() {
-  return (
-    <section className="acquisition-section" id="adquisicion">
-      <div className="section-head split-head">
-        <div>
-          <p className="section-kicker light"><Radar size={15} /> Adquisición de Datos</p>
-          <h2>Del levantamiento al modelo operativo.</h2>
-        </div>
-        <p>
-          Transformamos organizaciones reorganizando sus procesos con nuevos niveles de información por medio de adquisición, análisis y procesamiento de información geoespacial precisa.
-        </p>
-      </div>
-      <div className="acquisition-layout">
-        <div className="data-panel">
-          <img src={A.panel} alt="Panel técnico de capas geoespaciales y nube de puntos" />
-        </div>
-        <div className="acquisition-list">
-          {acquisition.map((item, index) => (
-            <article key={item.title}>
-              <span>0{index + 1}</span>
-              <h3>{item.title}</h3>
-              <p>{item.detail}</p>
-            </article>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
 function Sectors() {
   return (
     <section className="sectors-section" id="sectores">
@@ -358,7 +321,7 @@ function Footer() {
         <img src={A.logo} alt="CartoData" />
         <div className="footer-nav">
           <a href="/#impacto">Impacto</a>
-          <a href="/#adquisicion">Adquisición</a>
+          <a href="/adquisicion">Adquisición</a>
           <a href="/#software">Software</a>
           <a href="/nosotros">Nosotros</a>
         </div>
@@ -382,7 +345,6 @@ export default function Home() {
       <Hero />
       <Impact />
       <Software />
-      <Acquisition />
       <Sectors />
       <Footer />
     </main>
