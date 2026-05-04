@@ -2,7 +2,7 @@
 Design reminder — Neo-Brutalismo Cartográfico Corporativo: blanco operativo + negro institucional, acentos guinda/rojo derivados de marca, módulos tipo visor, coordenadas, retículas discretas y composición asimétrica de firma premium.
 */
 
-import { ArrowUpRight, ChevronLeft, ChevronRight, Clock, Crosshair, Layers3, Menu, Play, Radar, Sparkles, X } from "lucide-react";
+import { ArrowUpRight, ChevronLeft, ChevronRight, Clock, Layers3, Menu, Play, Radar, Sparkles, X } from "lucide-react";
 import { useEffect, useState } from "react";
 
 const A = {
@@ -171,23 +171,6 @@ function Hero() {
             <span className="model-name">CartoIA 1.0</span>
             <button aria-label="Enviar consulta"><ArrowUpRight size={16} /></button>
           </div>
-        </div>
-      </div>
-      <div className="hero-manifest">
-        <div className="hero-copy">
-          <p className="section-kicker"><Crosshair size={15} /> Cartografía aplicada a decisiones críticas</p>
-          <h1>Inteligencia geoespacial para transformar territorio, procesos y operación.</h1>
-          <p>
-            CartoData integra adquisición de datos, software geoespacial y profesionalización para convertir el mundo real en información precisa, útil y accionable.
-          </p>
-          <div className="hero-actions">
-            <a className="primary-link" href="#software">Explorar eCarto <ArrowUpRight size={17} /></a>
-            <a className="secondary-link" href="#impacto">Ver impacto</a>
-          </div>
-        </div>
-        <div className="hero-visual" aria-hidden="true">
-          <img src={A.hero} alt="" />
-          <div className="coordinate-chip">LAT 20.6723 · LON -103.4524</div>
         </div>
       </div>
     </section>

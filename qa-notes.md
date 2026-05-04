@@ -43,3 +43,9 @@ La sección `#sectores` se revisó en navegador después de convertir las tarjet
 ## Revisión Nosotros — página independiente
 
 La ruta `/nosotros` carga correctamente como página separada, con header, contenido institucional ampliado, métricas y bloque final de operación geoespacial. El menú principal muestra `Nosotros` apuntando a la nueva ruta y conserva navegación hacia las secciones del home mediante enlaces con raíz. La revisión del contenido extraído del home confirma que el bloque `Nosotros` ya no aparece después de `Sectores`; el footer conserva un enlace hacia `/nosotros`. La validación `pnpm check && pnpm build` fue exitosa, con la advertencia de tamaño de chunk no bloqueante ya observada anteriormente.
+
+## QA — eliminación de bloque “Cartografía aplicada a decisiones críticas”
+
+Se validó el home actualizado en navegador. El bloque inferior del hero que contenía el texto “Cartografía aplicada a decisiones críticas”, el titular grande, los CTAs y la imagen lateral ya no aparece. La portada ahora conserva el prompt CartoIA y transiciona directamente hacia Cartomorfosis, manteniendo continuidad visual sin un bloque intermedio.
+
+La validación técnica con `pnpm check` y `pnpm build` fue exitosa. Vite reportó únicamente una advertencia de tamaño de chunk, sin errores de compilación.

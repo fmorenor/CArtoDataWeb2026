@@ -19,3 +19,9 @@
 - [x] Eliminar el bloque Nosotros de la página principal para que deje de aparecer en el home.
 - [x] Actualizar el enlace del menú principal y del footer para que apunten a la nueva página independiente.
 - [x] Validar TypeScript/build y revisar navegación desde el menú hacia Nosotros antes de guardar checkpoint.
+
+## Eliminar bloque Cartografía aplicada a decisiones críticas
+
+- [x] Localizar y retirar del home el bloque identificado como `Cartografía aplicada a decisiones críticas`.
+- [x] Revisar si la eliminación requiere ajustes de espaciado para que la transición entre secciones se mantenga natural.
+- [x] Validar TypeScript/build y revisar visualmente la página principal antes de guardar checkpoint.

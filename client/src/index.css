@@ -243,7 +243,7 @@ Design reminder — Neo-Brutalismo Cartográfico Corporativo: blanco operativo +
 .hero-section {
   position: relative;
   isolation: isolate;
-  min-height: 100svh;
+  min-height: auto;
   background:
     radial-gradient(circle at 50% 38%, rgba(255,255,255,0.9), transparent 27rem),
     radial-gradient(circle at 78% 24%, rgba(146,148,151,0.10), transparent 34rem),
