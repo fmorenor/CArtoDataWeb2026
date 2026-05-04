@@ -39,3 +39,7 @@ La sección `#software` carga correctamente después de la actualización. El bl
 ## Revisión Sectores — iconografía y enlaces
 
 La sección `#sectores` se revisó en navegador después de convertir las tarjetas en enlaces. Las cuatro tarjetas aparecen en escritorio con fondo oscuro, división vertical clara, nombres legibles y rutas preparadas para futuras landing pages sectoriales: `/sectores/catastro`, `/sectores/desarrollo-urbano`, `/sectores/agricultura` y `/sectores/mineria`. La revisión visual confirma que la composición ya se aproxima a la referencia; por el margen interno de algunos SVG se aplicará un último ajuste de escala visual para reforzar la presencia de los íconos sin cambiar las imágenes de fondo.
+
+## Revisión Nosotros — página independiente
+
+La ruta `/nosotros` carga correctamente como página separada, con header, contenido institucional ampliado, métricas y bloque final de operación geoespacial. El menú principal muestra `Nosotros` apuntando a la nueva ruta y conserva navegación hacia las secciones del home mediante enlaces con raíz. La revisión del contenido extraído del home confirma que el bloque `Nosotros` ya no aparece después de `Sectores`; el footer conserva un enlace hacia `/nosotros`. La validación `pnpm check && pnpm build` fue exitosa, con la advertencia de tamaño de chunk no bloqueante ya observada anteriormente.

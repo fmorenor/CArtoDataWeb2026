@@ -1200,6 +1200,118 @@ Design reminder — Neo-Brutalismo Cartográfico Corporativo: blanco operativo +
 
 .metric-grid span { display: block; margin-top: 1.2rem; color: rgba(17,18,18,0.58); line-height: 1.45; }
 
+.about-page {
+  background:
+    linear-gradient(90deg, rgba(17,18,18,0.04) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(17,18,18,0.04) 1px, transparent 1px),
+    var(--cd-paper);
+  background-size: 72px 72px;
+}
+
+.about-hero-page {
+  display: grid;
+  grid-template-columns: minmax(0, 0.88fr) minmax(360px, 0.62fr);
+  gap: clamp(2rem, 6vw, 6rem);
+  align-items: end;
+  min-height: calc(100vh - 78px);
+  padding: clamp(5rem, 10vw, 9rem) clamp(1rem, 5vw, 5rem) clamp(4rem, 7vw, 7rem);
+  border-bottom: 1px solid rgba(17,18,18,0.12);
+}
+
+.about-hero-copy {
+  max-width: 900px;
+}
+
+.about-hero-copy h1 {
+  margin: 0;
+  max-width: 960px;
+  font-family: "Urbanist", "Poppins", sans-serif;
+  font-size: clamp(4rem, 10vw, 9.8rem);
+  line-height: 0.82;
+  letter-spacing: -0.075em;
+  color: var(--cd-black);
+}
+
+.about-hero-copy > p:not(.section-kicker) {
+  max-width: 680px;
+  margin: clamp(1.4rem, 3vw, 2rem) 0 0;
+  color: rgba(17,18,18,0.66);
+  font-size: clamp(1.02rem, 1.35vw, 1.22rem);
+  line-height: 1.72;
+}
+
+.about-hero-copy .primary-link {
+  margin-top: clamp(1.5rem, 3vw, 2.25rem);
+}
+
+.about-hero-visual {
+  position: relative;
+  min-height: clamp(420px, 58vw, 680px);
+  border: 1px solid rgba(17,18,18,0.18);
+  overflow: hidden;
+  background: #141515;
+  box-shadow: 0 32px 90px rgba(17,18,18,0.22);
+}
+
+.about-hero-visual img {
+  width: 100%;
+  height: 100%;
+  min-height: inherit;
+  object-fit: cover;
+  filter: grayscale(0.2) contrast(1.08) saturate(0.86);
+}
+
+.standalone-about {
+  padding-top: clamp(4rem, 7vw, 7rem);
+}
+
+.about-map-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 0.78fr) minmax(320px, 0.5fr);
+  gap: 1px;
+  padding: 1px;
+  background: rgba(244,242,238,0.14);
+  color: #f4f2ee;
+}
+
+.about-map-panel img {
+  width: 100%;
+  min-height: clamp(380px, 48vw, 620px);
+  object-fit: cover;
+  filter: saturate(0.78) contrast(1.08);
+}
+
+.about-map-panel > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  padding: clamp(2rem, 5vw, 5rem);
+  background: #171818;
+}
+
+.about-map-panel span {
+  color: var(--cd-red);
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.72rem;
+  font-weight: 800;
+}
+
+.about-map-panel h2 {
+  margin: 1.2rem 0 0;
+  font-family: "Urbanist", "Poppins", sans-serif;
+  font-size: clamp(2.6rem, 5vw, 5.8rem);
+  line-height: 0.92;
+  letter-spacing: -0.065em;
+}
+
+.about-map-panel p {
+  max-width: 520px;
+  margin: 1.4rem 0 0;
+  color: rgba(244,242,238,0.68);
+  line-height: 1.72;
+}
+
 .site-footer {
   padding: clamp(3rem, 6vw, 5rem) clamp(1rem, 5vw, 5rem) 0;
   background: #171818;
@@ -1262,7 +1374,9 @@ Design reminder — Neo-Brutalismo Cartográfico Corporativo: blanco operativo +
   .hero-manifest,
   .split-head,
   .acquisition-layout,
-  .about-panel { grid-template-columns: 1fr; }
+  .about-panel,
+  .about-hero-page,
+  .about-map-panel { grid-template-columns: 1fr; }
   .prompt-card { justify-self: center; }
   .cartomorfosis-carousel { grid-template-columns: 1fr; padding-inline: 1rem; }
   .carousel-side { display: none; }
@@ -1271,7 +1385,10 @@ Design reminder — Neo-Brutalismo Cartográfico Corporativo: blanco operativo +
   .metric-grid { grid-template-columns: 1fr; }
   .sector-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .data-panel img { min-height: 430px; }
+  .about-hero-page { min-height: auto; align-items: start; }
+  .about-hero-visual { min-height: 460px; }
 }
+
 
 @media (max-width: 720px) {
   .hero-video-placeholder { min-height: 420px; padding-top: 4.8rem; }
@@ -1288,6 +1405,10 @@ Design reminder — Neo-Brutalismo Cartográfico Corporativo: blanco operativo +
   .software-products article { min-height: 260px; }
   .sector-card { min-height: 260px; }
   .sector-card img { width: clamp(132px, 36vw, 176px); height: clamp(132px, 36vw, 176px); }
+  .about-hero-page { padding-top: 3rem; }
+  .about-hero-copy h1 { font-size: clamp(3.2rem, 18vw, 5rem); }
+  .about-map-panel > div { padding: 2rem 1.2rem; }
+  .about-map-panel img { min-height: 300px; }
   .footer-bottom { flex-direction: column; }
   .site-header { padding: 0.9rem 1rem; }
 }

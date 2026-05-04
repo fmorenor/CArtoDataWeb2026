@@ -2,7 +2,7 @@
 Design reminder — Neo-Brutalismo Cartográfico Corporativo: blanco operativo + negro institucional, acentos guinda/rojo derivados de marca, módulos tipo visor, coordenadas, retículas discretas y composición asimétrica de firma premium.
 */
 
-import { ArrowUpRight, ChevronLeft, ChevronRight, Clock, Crosshair, Layers3, MapPinned, Menu, Play, Radar, Sparkles, X } from "lucide-react";
+import { ArrowUpRight, ChevronLeft, ChevronRight, Clock, Crosshair, Layers3, Menu, Play, Radar, Sparkles, X } from "lucide-react";
 import { useEffect, useState } from "react";
 
 const A = {
@@ -24,16 +24,10 @@ const A = {
 };
 
 const navItems = [
-  { label: "Impacto", href: "#impacto" },
-  { label: "Adquisición de Datos", href: "#adquisicion" },
-  { label: "Software", href: "#software" },
-  { label: "Nosotros", href: "#nosotros" },
-];
-
-const metrics = [
-  { value: "20+", label: "años integrando datos geoespaciales" },
-  { value: "360°", label: "visión aérea, terrestre y operativa" },
-  { value: "LAT 20.6723", label: "LON -103.4524 · Guadalajara" },
+  { label: "Impacto", href: "/#impacto" },
+  { label: "Adquisición de Datos", href: "/#adquisicion" },
+  { label: "Software", href: "/#software" },
+  { label: "Nosotros", href: "/nosotros" },
 ];
 
 const acquisition = [
@@ -73,7 +67,7 @@ const cartomorphosisSlides = [
     eyebrow: "Profesionalización",
     title: "Transferencia optimizada del conocimiento a procesos transformados",
     image: A.sectors,
-    href: "#nosotros",
+    href: "/nosotros",
   },
 ];
 
@@ -374,40 +368,16 @@ function Sectors() {
   );
 }
 
-function About() {
-  return (
-    <section className="about-section" id="nosotros">
-      <div className="about-panel">
-        <div>
-          <p className="section-kicker"><MapPinned size={15} /> Nosotros</p>
-          <h2>De la representación del mundo real a su gemelo digital.</h2>
-        </div>
-        <p>
-          El logotipo de CartoData representa la Proyección de Mercator, la C de Carto, la D de Data y la cruz central como presencia de trabajo. Esa misma lógica guía este sitio: precisión, tecnología, pertenencia y transformación.
-        </p>
-      </div>
-      <div className="metric-grid">
-        {metrics.map((metric) => (
-          <article key={metric.value}>
-            <strong>{metric.value}</strong>
-            <span>{metric.label}</span>
-          </article>
-        ))}
-      </div>
-    </section>
-  );
-}
-
 function Footer() {
   return (
     <footer className="site-footer">
       <div className="footer-main">
         <img src={A.logo} alt="CartoData" />
         <div className="footer-nav">
-          <a href="#impacto">Impacto</a>
-          <a href="#adquisicion">Adquisición</a>
-          <a href="#software">Software</a>
-          <a href="#nosotros">Nosotros</a>
+          <a href="/#impacto">Impacto</a>
+          <a href="/#adquisicion">Adquisición</a>
+          <a href="/#software">Software</a>
+          <a href="/nosotros">Nosotros</a>
         </div>
         <div className="footer-address">
           <strong>LAT 20.6723<br />LON -103.4524</strong>
@@ -431,7 +401,6 @@ export default function Home() {
       <Software />
       <Acquisition />
       <Sectors />
-      <About />
       <Footer />
     </main>
   );

@@ -12,3 +12,10 @@
 - [x] Incrementar la escala visual de los íconos de Catastro, Desarrollo urbano, Agricultura y Minería para acercarlos a la referencia.
 - [x] Ajustar composición, contraste y responsive de las tarjetas sin cambiar las imágenes de fondo actuales, ya que el usuario podrá sustituirlas después.
 - [x] Validar TypeScript/build y revisar visualmente la sección Sectores antes de guardar checkpoint.
+
+## Separar Nosotros en página independiente
+
+- [x] Crear una página `/nosotros` con el contenido actual de la sección Nosotros.
+- [x] Eliminar el bloque Nosotros de la página principal para que deje de aparecer en el home.
+- [x] Actualizar el enlace del menú principal y del footer para que apunten a la nueva página independiente.
+- [x] Validar TypeScript/build y revisar navegación desde el menú hacia Nosotros antes de guardar checkpoint.
