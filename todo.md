@@ -82,4 +82,17 @@
 - [x] Implementar transición suave de apertura y cierre sin desaparición abrupta.
 - [x] Ajustar CSS de keyframes y estados visuales para mantener el panel translúcido.
 - [x] Validar TypeScript/build y guardar checkpoint del refinamiento.
-- [ ] Entregar resumen del ajuste de animación.
+- [x] Entregar resumen del ajuste de animación.
+
+## Conversión full-stack e integración de File Storage
+
+- [x] Agregar capacidades full-stack al proyecto mediante la actualización oficial.
+- [x] Revisar la documentación y archivos generados para entender el patrón de backend, auth y storage.
+- [x] Identificar cómo exponer o usar File Storage desde el frontend sin afectar el diseño actual.
+- [x] Implementar una integración mínima o documentación de uso para subir/gestionar archivos.
+- [x] Validar TypeScript/build y revisar estado del proyecto tras la conversión.
+- [ ] Guardar checkpoint y sincronizar cambios relevantes con GitHub si aplica.
+- [ ] Entregar resumen de cambios y pasos de uso de File Storage.
+- [x] Corregir el error TypeScript pendiente en `server/_core/storageProxy.ts` y revalidar `pnpm check`/`pnpm build`.
+- [x] Endurecer `StorageStudio` con manejo explícito de errores en lectura/subida de archivos y validación de tamaño/tipo en frontend.
+- [x] Restringir la consola de archivos a administradores o filtrar/listar solo archivos del usuario correspondiente según el comportamiento esperado para esta vista interna.

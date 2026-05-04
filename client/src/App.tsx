@@ -11,13 +11,15 @@ import { ThemeProvider } from "./contexts/ThemeContext";
 import About from "./pages/About";
 import Acquisition from "./pages/Acquisition";
 import Home from "./pages/Home";
-
+import StorageStudio from "./pages/StorageStudio";
 function Router() {
+  // make sure to consider if you need authentication for certain routes
   return (
     <Switch>
       <Route path={"/"} component={Home} />
       <Route path={"/nosotros"} component={About} />
       <Route path={"/adquisicion"} component={Acquisition} />
+      <Route path={"/admin/archivos"} component={StorageStudio} />
       <Route path={"/404"} component={NotFound} />
       <Route component={NotFound} />
     </Switch>
