@@ -1088,11 +1088,14 @@ Design reminder — Neo-Brutalismo Cartográfico Corporativo: blanco operativo +
   min-height: 360px;
   display: flex;
   flex-direction: column;
-  justify-content: end;
+  justify-content: center;
   align-items: center;
-  padding: 1.5rem;
+  padding: clamp(1.35rem, 2.4vw, 2rem);
   overflow: hidden;
   background: #111;
+  color: #fff;
+  text-decoration: none;
+  isolation: isolate;
 }
 
 .sector-card::before {
@@ -1117,12 +1120,39 @@ Design reminder — Neo-Brutalismo Cartográfico Corporativo: blanco operativo +
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, transparent 20%, rgba(0,0,0,0.84));
+  background:
+    radial-gradient(circle at 50% 38%, rgba(255,255,255,0.18), transparent 10rem),
+    linear-gradient(180deg, rgba(0,0,0,0.16) 0%, rgba(0,0,0,0.36) 42%, rgba(0,0,0,0.78) 100%);
+  transition: background 450ms ease;
 }
-.sector-card:hover::before { transform: scale(1.07); opacity: 1; }
+.sector-card:hover::before,
+.sector-card:focus-visible::before { transform: scale(1.08); opacity: 1; }
+.sector-card:hover::after,
+.sector-card:focus-visible::after { background: linear-gradient(180deg, rgba(0,0,0,0.08), rgba(0,0,0,0.62)); }
+.sector-card:focus-visible { outline: 2px solid #f5f2eb; outline-offset: 4px; }
 .sector-card img, .sector-card h3 { position: relative; z-index: 1; }
-.sector-card img { width: 76px; height: 76px; object-fit: contain; margin-bottom: 1.1rem; filter: brightness(1.65); }
-.sector-card h3 { margin: 0; text-transform: uppercase; text-align: center; font-size: 0.98rem; letter-spacing: 0.08em; }
+.sector-card img {
+  width: clamp(150px, 11vw, 210px);
+  height: clamp(150px, 11vw, 210px);
+  object-fit: contain;
+  margin-bottom: clamp(0.72rem, 1.2vw, 1rem);
+  filter: brightness(2.2) contrast(1.08) drop-shadow(0 8px 24px rgba(0,0,0,0.46));
+  transform: scale(1.24);
+  transform-origin: center;
+  transition: transform 450ms ease, filter 450ms ease;
+}
+.sector-card:hover img,
+.sector-card:focus-visible img { transform: translateY(-0.28rem) scale(1.32); filter: brightness(2.45) contrast(1.1) drop-shadow(0 12px 30px rgba(0,0,0,0.58)); }
+.sector-card h3 {
+  max-width: 12ch;
+  margin: 0;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: clamp(0.94rem, 1.15vw, 1.1rem);
+  line-height: 1.02;
+  letter-spacing: 0.055em;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.84);
+}
 
 .about-section {
   padding: clamp(4rem, 8vw, 8rem) clamp(1rem, 5vw, 5rem);
@@ -1257,6 +1287,7 @@ Design reminder — Neo-Brutalismo Cartográfico Corporativo: blanco operativo +
   .footer-main { grid-template-columns: 1fr; }
   .software-products article { min-height: 260px; }
   .sector-card { min-height: 260px; }
+  .sector-card img { width: clamp(132px, 36vw, 176px); height: clamp(132px, 36vw, 176px); }
   .footer-bottom { flex-direction: column; }
   .site-header { padding: 0.9rem 1rem; }
 }

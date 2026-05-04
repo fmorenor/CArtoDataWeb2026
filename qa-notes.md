@@ -35,3 +35,7 @@ Se agregó una pleca horizontal inmediatamente debajo del carrusel de **Cartomor
 ## Revisión eCarto — carrusel de producto
 
 La sección `#software` carga correctamente después de la actualización. El bloque muestra un panel oscuro con degradado azul, título `eCarto`, CTA `Conocer más`, carrusel central de imágenes con flechas laterales y puntos de navegación. La interacción con el segundo punto cambia correctamente la imagen principal a la pantalla azul de eCarto Cloud Services. Las tarjetas `eCarto on premise` y `CartoData Cloud` permanecen debajo del carrusel, alineadas en dos columnas en escritorio, con texto centrado y fondo visual oscuro coherente con la referencia. El cierre textual aparece bajo las tarjetas, centrado y en tono crema.
+
+## Revisión Sectores — iconografía y enlaces
+
+La sección `#sectores` se revisó en navegador después de convertir las tarjetas en enlaces. Las cuatro tarjetas aparecen en escritorio con fondo oscuro, división vertical clara, nombres legibles y rutas preparadas para futuras landing pages sectoriales: `/sectores/catastro`, `/sectores/desarrollo-urbano`, `/sectores/agricultura` y `/sectores/mineria`. La revisión visual confirma que la composición ya se aproxima a la referencia; por el margen interno de algunos SVG se aplicará un último ajuste de escala visual para reforzar la presencia de los íconos sin cambiar las imágenes de fondo.

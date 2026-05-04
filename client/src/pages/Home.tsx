@@ -44,10 +44,10 @@ const acquisition = [
 ];
 
 const sectors = [
-  { name: "Catastro", icon: A.iconCatastro, className: "tile-one" },
-  { name: "Desarrollo urbano", icon: A.iconUrbanismo, className: "tile-two" },
-  { name: "Agricultura", icon: A.iconAgricultura, className: "tile-three" },
-  { name: "Minería", icon: A.iconMineria, className: "tile-four" },
+  { name: "Catastro", icon: A.iconCatastro, className: "tile-one", href: "/sectores/catastro" },
+  { name: "Desarrollo urbano", icon: A.iconUrbanismo, className: "tile-two", href: "/sectores/desarrollo-urbano" },
+  { name: "Agricultura", icon: A.iconAgricultura, className: "tile-three", href: "/sectores/agricultura" },
+  { name: "Minería", icon: A.iconMineria, className: "tile-four", href: "/sectores/mineria" },
 ];
 
 const cartomorphosisSlides = [
@@ -356,7 +356,7 @@ function Acquisition() {
 
 function Sectors() {
   return (
-    <section className="sectors-section">
+    <section className="sectors-section" id="sectores">
       <div className="sector-bg" aria-hidden="true"><img src={A.sectors} alt="" /></div>
       <div className="section-head center-head compact">
         <p className="section-kicker light"><Layers3 size={15} /> Sectores</p>
@@ -364,10 +364,10 @@ function Sectors() {
       </div>
       <div className="sector-grid">
         {sectors.map((sector) => (
-          <article key={sector.name} className={`sector-card ${sector.className}`}>
+          <a key={sector.name} href={sector.href} className={`sector-card ${sector.className}`} aria-label={`Ir a landing page de ${sector.name}`}>
             <img src={sector.icon} alt="" />
             <h3>{sector.name}</h3>
-          </article>
+          </a>
         ))}
       </div>
     </section>
