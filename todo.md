@@ -31,3 +31,9 @@
 - [ ] Revisar estado de Git local y confirmar si existe remoto configurado para `https://github.com/fmorenor/CArtoDataWeb2026`.
 - [ ] Preparar commit con los cambios actuales del proyecto CartoData Web 2026.
 - [ ] Enviar la rama actual al repositorio de GitHub indicado y verificar que el push finalice correctamente.
+
+## Reintento GitHub tras cambio de permisos
+
+- [ ] Revalidar el estado local y los permisos del repositorio después del cambio realizado por el usuario.
+- [ ] Reintentar el envío de `main` al remoto `fmorenor/CArtoDataWeb2026`.
+- [ ] Verificar en GitHub que el commit remoto apunte a la versión actual enviada.
